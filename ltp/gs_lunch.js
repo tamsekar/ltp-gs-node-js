@@ -1,8 +1,8 @@
 /* Variables */
-lunch = '12 inch pizza'
-sizeofParty = 4
-totalCost = 14.99
-averageCost = totalCost / sizeofParty
-message = 'Your lunch of ' + lunch + ' for ' + sizeofParty + ' people will cost you ' + averageCost
+var lunch = '12 inch pizza';
+var sizeofParty = 4;
+var totalCost = 14.99;
+var averageCost = totalCost / sizeofParty;
+var message = 'Your lunch of ' + lunch + ' for ' + sizeofParty + ' people will cost you ' + averageCost;
 
-console.log(message)
+console.log(message);
