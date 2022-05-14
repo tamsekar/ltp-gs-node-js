@@ -1,4 +1,4 @@
-// Roll die program with function accepting parameters
+// Roll dice program01 with function accepting parameters
 var getDieRoll = function (dieSize) {
     console.log(dieSize);
     return Math.ceil(dieSize * Math.random());

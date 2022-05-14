@@ -1,7 +1,7 @@
-// Die roll program with function to replace repetitive code.
+// Die roll program01 with function to replace repetitive code.
 
 var getDieRoll = function () {
-    console.log("Rolling a die...");
+    console.log("Rolling a dice...");
     return Math.ceil(6 * Math.random())
 };
 

@@ -14,7 +14,7 @@ while ( roll < 4) {                 //executes while when the roll is less than 
 }
 
 do {                                                // do-while always executes at least once.
-    roll = getDieRoll(6);                    // roll die
+    roll = getDieRoll(6);                    // roll dice
     console.log("do..while loop roll " + roll);     // log roll
 } while (roll > 4);                          // if condition true, re-roll. If false exists do-while.
 
