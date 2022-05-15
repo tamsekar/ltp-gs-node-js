@@ -21,3 +21,14 @@ exports["Can average grades"] = function (test) {
     test.equal(average, 75);
     test.done();
 };
+
+exports["Can sum grades"] = function (test) {
+    book.addGrade(100);
+    book.addGrade(90);
+    book.addGrade(75);
+    book.addGrade(80);
+
+    var sumOf = book.getSumOfGrades();
+    test.equal(sumOf, 345);
+    test.done();
+};
