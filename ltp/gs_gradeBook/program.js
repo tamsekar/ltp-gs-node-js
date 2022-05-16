@@ -1,21 +1,22 @@
-var book = require("./lib/grades").book
+var book = require("./lib/grades").book;
+var express = require("express");
+var app = express();
 
+app.get("/", function (req, res) {
+    res.send("hello world!");
+})
 
-var fetchAverage = function () {
-    book.reset();
-    for (var i = 2; i < process.argv.length; i++) {
-        book.addGrade(parseInt(process.argv[i]));
+app.get("/grade", function(req, res) {
+    // "1,2,3".split(",") => [1,2,3];
+    var grades = req.query.grades.split(",");
+    for (var i = 0; i < grades.length; i++) {
+        book.addGrade(parseInt(grades[i]));
     }
-    return book.getAverage();
-}
+    var average = book.getAverage();
+    var letter = book.getLetterGrade();
 
-var fetchSum = function () {
-    book.reset();
-    for (var i = 2; i < process.argv.length; i++) {
-        book.addGrade(parseInt(process.argv[i]));
-    }
-    return book.getSumOfGrades();
-}
+    res.send("Your average is " + average + " grade is " + letter);
+})
 
-console.log(Math.floor(fetchAverage()));
-console.log(fetchSum());
+app.listen(3000);
+console.log("Server ready..")

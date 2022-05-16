@@ -24,6 +24,24 @@ var gradeBook = {
         return total
     },
 
+    getLetterGrade: function () {
+        var average = this.getAverage();
+
+        if (average >= 90) {
+            return 'A'
+        }
+        else if (average >= 80) {
+            return 'B'
+        }
+        else if (average >= 70) {
+            return 'C'
+        }
+        else if (average >= 60) {
+            return 'D'
+        }
+        return 'F'
+    },
+
     reset: function () {
         this._grades = [];
     }
